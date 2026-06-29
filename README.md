@@ -1,4 +1,4 @@
-# Real-Time Project Manager
+# ProjeX
 
 ## Project Startup Instructions
 

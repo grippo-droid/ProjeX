@@ -95,7 +95,7 @@ const Dashboard = () => {
                 <Avatar user={user} size="md" className="ring-2 ring-indigo-100 dark:ring-indigo-900 hover:ring-indigo-300 transition" />
               </button>
               <div>
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Project Manager</h1>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">ProjeX</h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
                   Welcome back, {user?.username}!
                   <span className="ml-2 px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-700 dark:text-indigo-200 text-xs rounded-full">
@@ -166,7 +166,7 @@ const Dashboard = () => {
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white p-6 rounded-xl shadow-lg hover:shadow-xl transition"
             >
               <TrendingUp className="w-8 h-8 mb-3" />
-              <h3 className="text-lg font-semibold">Project Manager</h3>
+              <h3 className="text-lg font-semibold">ProjeX</h3>
               <p className="text-sm text-blue-100 mt-1">Create & manage tasks</p>
             </button>
           )}

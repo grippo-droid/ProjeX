@@ -10,7 +10,7 @@ load_dotenv()
 
 # MongoDB URI and DB name
 MONGO_URI = os.getenv("MONGO_URI")
-DB_NAME = os.getenv("DB_NAME", "real_time_project_manager")
+DB_NAME = os.getenv("DB_NAME", "projex")
 
 # -----------------------
 # In-memory mock collection (fallback when MongoDB is unreachable)

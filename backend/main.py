@@ -5,7 +5,7 @@ import os
 from backend.routers import auth, admin, team_manager, tasks, users, chat, activity
 
 app = FastAPI(
-    title="Real-Time Project Manager",
+    title="ProjeX",
     version="1.0.0"
 )
 
@@ -14,8 +14,8 @@ origins = [
     "http://127.0.0.1:3000",
     "http://localhost:3001",
     "http://127.0.0.1:3001",
-    "https://real-time-project-manager-rerk4knfz-parth-mahales-projects.vercel.app",
-    "https://real-time-project-manager.vercel.app",
+    "https://projex-rerk4knfz-parth-mahales-projects.vercel.app",
+    "https://projex.vercel.app",
 ]
 
 app.add_middleware(
