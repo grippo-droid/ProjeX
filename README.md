@@ -1,4 +1,4 @@
-# Real-Time Task Manager
+# Real-Time Project Manager
 
 ## Project Startup Instructions
 

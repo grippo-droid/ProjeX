@@ -1,6 +1,6 @@
 # Deployment Guide
 
-This guide details how to deploy the Real-Time Task Manager.
+This guide details how to deploy the Real-Time Project Manager.
 
 ## Prerequisites
 - GitHub Repository with the latest code pushed.
@@ -21,9 +21,9 @@ git push origin master
 ## 2. Deploy Backend (Render)
 
 1.  **New Web Service**: Go to the Render Dashboard and click **New +** -> **Web Service**.
-2.  **Connect GitHub**: Select your `Real_Time_Task_Manager` repository.
+2.  **Connect GitHub**: Select your `Real_Time_Project_Manager` repository.
 3.  **Configure Settings**:
-    - **Name**: `task-manager-api` (or similar)
+    - **Name**: `project-manager-api` (or similar)
     - **Region**: Closest to you (e.g., Singapore, Frankfurt, Oregon)
     - **Branch**: `master` (or main)
     - **Root Directory**: `.` (leave empty or dot)
@@ -33,27 +33,27 @@ git push origin master
 4.  **Environment Variables**:
     Scroll down to "Environment Variables" and add:
     - `MONGO_URI`: `your_mongodb_connection_string` (Copy from your `.env` file)
-    - `DB_NAME`: `real_time_task_manager`
+    - `DB_NAME`: `real_time_project_manager`
     - `SECRET_KEY`: `your_secret_key` (Generate a random string if you haven't)
     - `PYTHON_VERSION`: `3.10.0` (Optional, good for stability)
 5.  **Deploy Web Service**: Click **Create Web Service**.
 
 > [!NOTE]
-> Wait for the deployment to finish. Once done, copy the **onrender.com URL** (e.g., `https://task-manager-api.onrender.com`).
+> Wait for the deployment to finish. Once done, copy the **onrender.com URL** (e.g., `https://project-manager-api.onrender.com`).
 
 ---
 
 ## 3. Deploy Frontend (Vercel)
 
 1.  **Import Project**: Go to Vercel Dashboard and click **Add New...** -> **Project**.
-2.  **Select Repository**: Import `Real_Time_Task_Manager`.
+2.  **Select Repository**: Import `Real_Time_Project_Manager`.
 3.  **Configure Project**:
     - **Framework Preset**: Create React App (should be detected automatically).
     - **Root Directory**: Click "Edit" and select `frontend`. **This is crucial!**
 4.  **Environment Variables**:
     Expand the "Environment Variables" section and add:
     - `REACT_APP_API_URL`: Paste the **Render Backend URL** from the previous step.
-      *(Example: `https://task-manager-api.onrender.com` - **do not** include a trailing slash)*
+      *(Example: `https://project-manager-api.onrender.com` - **do not** include a trailing slash)*
 5.  **Deploy**: Click **Deploy**.
 
 ---
@@ -61,7 +61,7 @@ git push origin master
 ## 4. Final Configuration
 
 1.  **Update Backend CORS (Optional/Recommended)**:
-    - Once the frontend is live on Vercel, copy the **Vercel URL** (e.g., `https://task-manager-frontend.vercel.app`).
+    - Once the frontend is live on Vercel, copy the **Vercel URL** (e.g., `https://project-manager-frontend.vercel.app`).
     - Go back to your Render Dashboard -> Environment Variables.
     - You can add a `FRONTEND_URL` variable if you refactor the code to use it, but currently, we set CORS to allow `*` (All origins), so it should work out of the box!
     - For better security later, update `backend/main.py` to only allow your Vercel domain.
