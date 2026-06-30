@@ -1,5 +1,7 @@
 # ProjeX
 
+> **Note:** Backend is hosted on Render's free tier, which spins down after periods of inactivity. The first request may take 30-60 seconds to load while the server wakes up. Subsequent requests will be fast.
+
 ## Project Startup Instructions
 
 To start the project, you need to run the backend and frontend servers in separate terminal windows.
